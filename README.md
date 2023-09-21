@@ -2,7 +2,7 @@
  <h1 align="center">Hi 👋, I'm Gabriella Gugliotta</h1>
 <h3 align="center">A passionate full stack developer from the United States</h3>
 
-- 🔭 I’m currently working on a [movie API! Watch my progress here:](github.com/ggugliotta/myFlix-client-side)
+- 🔭 I’m currently working on a [movie API! Watch my progress here](github.com/ggugliotta/myFlix-client-side)
 
 - 🌱 I’m currently learning **how to use the React framework for the front-end portion of my API.**
 
