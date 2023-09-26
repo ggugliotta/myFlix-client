@@ -30,8 +30,8 @@ export const MainView = () => {
        },
       { 
         id: 5, 
-        title: "Where the Heart Is"
-        image: "https://m.media-amazon.com/images/I/41DAuh5ebqL._AC_UF894,1000_OL80_.jpeg"
+        title: "Where the Heart Is",
+        image: "https://m.media-amazon.com/images/I/41DAuh5ebqL._AC_UF894,1000_OL80_.jpeg",
         director: "Matt Williams"
        },
       { 
@@ -55,7 +55,7 @@ export const MainView = () => {
       { 
         id: 9,
         title: "Star Wars: Episode I - The Phantom Menace",
-        image: "upload.wikimedia.org/wikipedia/en/1/15/The_phantom_menace_video_game.jpeg"
+        image: "upload.wikimedia.org/wikipedia/en/1/15/The_phantom_menace_video_game.jpeg",
         director: "George Lucas"
        },
       { 
