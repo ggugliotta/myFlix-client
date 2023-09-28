@@ -10,11 +10,11 @@
 
 - 💬 Ask me about **how I like working with React and node.js!**
 
-- 📫 How to reach me **gabriellagugliotta96@gmail.com**
+- 📫 Reach me at **gabriellagugliotta96@gmail.com**
 
 - 📄 Know about my experiences [linkedin.com/gabriella-gugliotta](linkedin.com/gabriella-gugliotta)
 
-- ⚡ Fun fact **I just learned how to use jQuery, Render, noSQL (mongoose/MongoDB).**
+- ⚡ Fun fact **I just learned how to use jQuery, Render, and noSQL (mongoose/MongoDB).**
 
 <h3 align="left">Connect with me:</h3>
 <p align="left">
