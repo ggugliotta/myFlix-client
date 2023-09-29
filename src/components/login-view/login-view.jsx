@@ -13,7 +13,7 @@ export const LoginView = ({ onLoggedIn }) => {
       Password: password
     };
 
-    fetch("https://moviesapi-zy5e.onrender.com/account/login", {
+    fetch("https://moviesapi-zy5e.onrender.com/login", {
       method: "POST",
       headers: {
         "Content-Type": "application/json"
@@ -34,22 +34,23 @@ export const LoginView = ({ onLoggedIn }) => {
      .catch((e) => {
         alert("Something went wrong");
     });
+  }
 
   return (
     <form onSubmit={handleSubmit}>
       <label>
-        Username: 
-        <input 
-          type="text" 
+        Username:
+        <input
+          type="text"
           value={username}
           onChange={(e) => setUsername(e.target.value)}
-          required 
+          required
         />
       </label>
       <label>
-        Password: 
-        <input 
-          type="password" 
+        Password:
+        <input
+          type="password"
           value={password}
           onChange={(e) => setPassword(e.target.value)}
           required
@@ -58,4 +59,4 @@ export const LoginView = ({ onLoggedIn }) => {
       <button type="submit">Submit</button>
     </form>
   );
-}}
+}

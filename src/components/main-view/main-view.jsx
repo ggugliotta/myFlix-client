@@ -6,7 +6,7 @@ import { SignupView } from "../signup-view/signup-view";
 
 export const MainView = () => {
     const storedUser = JSON.parse(localStorage.getItem("user"));
-    const storedToken = localstorage.getItem("token");
+    const storedToken = localStorage.getItem("token");
     const [movies, setMovies] = useState([]);
     const [selectedMovie, setSelectedMovie] = useState(null);
     const [user, setUser] = useState(storedUser? storedUser : null);
@@ -15,18 +15,24 @@ export const MainView = () => {
     useEffect(() => {
       if (!token) return;
 
-      fetch ("https://moviesapi-zy5e.onrender.com", {
-        headers: { Authorization: 'Bearer ${token}' }
+      fetch ("https://moviesapi-zy5e.onrender.com/movies", {
+        headers: { Authorization: `Bearer ${token}` }
       })
         .then((response) => response.json())
         .then((movies) => {
           console.log(movies);
-          const moviesFromApi = data.docs.map((doc) => {
+          const moviesFromApi = movies.map((movie) => {
             return {
-              id: doc.key,
-              title: doc.title,
-              image: "https://moviesapi-zy5e.onredner.com/b/id/${doc.cover_i}-L.jpg",
-              director: doc.director_name?.[0]
+              id: movie._id,
+              title: movie.Title,
+              imageURL: movie?.ImageUrl ?? movie?.ImagePath ?? '',
+              director: movie.Director,
+              genre: movie.Genre,
+              actors: movie.Actors,
+              description: movie.Description,
+              featured: movie.Featured,
+              rating: movie.Rating ?? '',
+              releaseYear: Number.parseInt(movie.ReleaseYear)
             };
           });
 
@@ -41,7 +47,7 @@ export const MainView = () => {
           setUser(user);
           setToken(token);
         }} />
-        or 
+        or
         <SignupView />
      </>
     );
@@ -57,11 +63,11 @@ export const MainView = () => {
             localStorage.clear();
           }}
           >
-            Logout   
+            Logout
           </button>
           <MovieView
-           movie={selectedMovie} 
-           onBackClick={() => setSelectedMovie(null)} 
+           movie={selectedMovie}
+           onBackClick={() => setSelectedMovie(null)}
            />
         </>
     );
@@ -73,28 +79,39 @@ export const MainView = () => {
         <button
           onClick={() => {
             setUser(null);
-            setToken(null); 
-            localStorage.clear();        
+            setToken(null);
+            localStorage.clear();
            }}
         >
-          Logout  
+          Logout
         </button>
         <div>The list is empty!</div>
       </>
     );
-  } 
+  }
 
 return (
-  <div>
-    {movies.map((movie) => (
-      <MovieCard
-       key={movie.id} 
-       movie={movie}
-       onMovieClick={(newSelectedMovie) => {
-         setSelectedMovie(newSelectedMovie);
-       }}
-       />
-    ))}
-  </div>
- );
+  <>
+    <button
+      onClick={() => {
+        setUser(null);
+        setToken(null);
+        localStorage.clear();
+      }}
+    >
+      Logout
+    </button>
+    <div>
+      {movies.map((movie) => (
+        <MovieCard
+          key={movie.id}
+          movie={movie}
+          onMovieClick={(newSelectedMovie) => {
+            setSelectedMovie(newSelectedMovie);
+          }}
+        />
+      ))}
+    </div>
+  </>
+);
 }
