@@ -11,14 +11,14 @@ export const SignupView = () => {
     event.preventDefault();
 
     const data = {
-        Name: name, 
+        Name: name,
         Username: username,
         Password: password,
         Email: email,
         Birthday: birthday
     };
 
-    fetch("https://moviesapi-zy5e.onrender.com", {
+    fetch("https://moviesapi-zy5e.onrender.com/users", {
         method: "POST",
         body: JSON.stringify(data),
         headers: {
@@ -87,5 +87,3 @@ export const SignupView = () => {
     </form>
   );
 };
-        
-   
