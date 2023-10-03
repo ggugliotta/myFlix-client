@@ -3,6 +3,7 @@ import { MovieCard } from "../movie-card/movie-card";
 import { MovieView } from "../movie-view/movie-view";
 import { LoginView } from "../login-view/login-view";
 import { SignupView } from "../signup-view/signup-view";
+import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
 
 export const MainView = () => {
@@ -40,56 +41,6 @@ export const MainView = () => {
           setMovies(moviesFromApi);
         });
     }, [token]);
-
-  if (!user) {
-    return (
-      <>
-        <LoginView onLoggedIn={(user, token) => {
-          setUser(user);
-          setToken(token);
-        }} />
-        or
-        <SignupView />
-     </>
-    );
-  }
-
-  if (selectedMovie) {
-    return (
-      <>
-        <button
-          onClick={() => {
-            setUser(null);
-            setToken(null);
-            localStorage.clear();
-          }}
-          >
-            Logout
-          </button>
-          <MovieView
-           movie={selectedMovie}
-           onBackClick={() => setSelectedMovie(null)}
-           />
-        </>
-    );
-  }
-
-  if (movies.length === 0) {
-    return (
-      <>
-        <button
-          onClick={() => {
-            setUser(null);
-            setToken(null);
-            localStorage.clear();
-           }}
-        >
-          Logout
-        </button>
-        <div>The list is empty!</div>
-      </>
-    );
-  }
 
 return (
    <Row className="justify-content-md-center"> 
