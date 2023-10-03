@@ -10,12 +10,6 @@
 
 
 
-
-
-.my-flix {
-  color: #4682b4;
-}
-
 :root, [data-bs-theme="light"] {
   --bs-blue: #0d6efd;
   --bs-indigo: #6610f2;
@@ -91,7 +85,7 @@
   --bs-body-line-height: 1.5;
   --bs-body-color: #212529;
   --bs-body-color-rgb: 33, 37, 41;
-  --bs-body-bg: HoneyDew;
+  --bs-body-bg: Honeydew;
   --bs-body-bg-rgb: 240, 255, 240;
   --bs-emphasis-color: #000;
   --bs-emphasis-color-rgb: 0, 0, 0;
