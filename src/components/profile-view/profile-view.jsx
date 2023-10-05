@@ -1,67 +1,52 @@
-import { Link } from "react-router-dom";
+import React, { useEffect, useState} from 'react';
+import { Container, Col, Row, Card } from 'react-bootstrap';
+import UserInfo from './user-info';
+import FavoriteMovies from './favorite-movies';
+import UpdateUser from './update-user';
 import './profile-view.scss';
-import axios from 'axios';
 
-export function ProfileView{(movies, OnUpdateUserInfo)} (
-    const [user, setUser] = useState({})
-
-    const favoriteMovieList = movie.filter((movies) => {
+export const ProfileView ({ movies }) => {
+    const [user, setUser] = useState({
+        Username: '',
+        Email: '',
+        FavoriteMovies: []
+    })
+    const favoriteMovies = movies.filter(m => user.FavoriteMovies.includes(m._id);
+    const handleSubmit = (event) => {
+        event.preventDefault();
+        console.log('Submitted');
     };
-
-    const getUser = () => {}
-
-    const handleSubmit = (e) => {}
-
-    const removeFav = (id) => {}
-
+    const handleRemove = (id) => {listMovie.list.filter((Id) => item.Id !=== id);
     const handleUpdate = (e) => {};
 
-    useEffect(() => {} }, [])
+    useEffect(() => {
 
+    } 
+
+    }, []);
 
     return (
-        <div>
-          <p>Username: {user.Username}</p>
-          <p>Email: {user.Email}</p>
-        </div>
-            <h2>Favorite Movies</h2>
-            {favoriteMoviesList.map((movie) => {
-               return (
-                <div key={movies._id}>
-                    <img src={movies.ImageUrl} />
-                    <Link to={`/movies/${movies._id}`}>
-                        <h4>{movies.Title}</h4>
-                    </Link>
-                    <button variant="secondary" onClick={() => removeFav(movies._id)}>Remove from list</button>
-                </div>
-              )
-           })
-           }
-        </div>
-
-     <form className='profile-form' onSubmit={(e) => handleSubmit(e)}>
-        <h2>Want to change some information?</h2>
-        <label>Username:</label>
-        <input>
-            type='text'
-            name='Username'
-            defaultValue={user.Username}
-            onChange={e => handleUpdate(e)} />
-        <label>Password</label>
-        <input
-            type='password'
-            name='password'
-            defaultValue={user.Password}
-            onChange={e => handleUpdate(e)} />
-
-        <label>Email address</label>
-        <input
-            type='email'
-            name='email'
-            defaultValue={user.Email}
-            onChange={e => handleUpdate(e.target.value)} />
-        <button variant="primary" type="submit">
-            Update 
-        </button>
-        </input>
-    </form>
+      <Container>
+        <Row>
+            <Col xs={12} sm={4}>
+                <Card>
+                    <Card.Body>
+                           <UserInfo name={user.Username} email={user.Email} />
+                    </Card.Body>
+                </Card>
+           
+            </Col>
+            <Col xs={12} xs={8}>
+                <Card>
+                    <Card.Body>
+                        <UpdateUser handleSubmit={handleSubmit} handleUpdate={handleUpdate} />
+                    </Card.Body>
+                </Card>
+            </Col>
+        </Row>
+       
+        <FavoriteMovies favoriteMovieList={favoriteMovieList} />
+      
+      </Container>
+    );
+}
