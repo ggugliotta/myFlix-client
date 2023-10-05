@@ -6,8 +6,8 @@ import { Link } from "react-router-dom";
 //MovieCard Function Component
 export const MovieCard = ({ movie }) => {
     return (
-       <Card className="h-100">
-        <Card.Img variant="top" src={movie.image} />
+       <Card>
+        <Card.Img variant="top" src={movie.imageURL} />
         <Card.Body>
           <Card.Title>{movie.title}</Card.Title>
           <Card.Text>{movie.director.name} </Card.Text>
@@ -33,5 +33,4 @@ MovieCard.propTypes = {
     releaseYear: PropTypes.number.isRequired,
     rating: PropTypes.string.isRequired
   }).isRequired,
-  onMovieClick: PropTypes.func.isRequired
 };
