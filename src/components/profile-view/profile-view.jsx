@@ -40,7 +40,7 @@ export const ProfileView ({ user, movies }) => {
     return (
       <Container>
         hello 
-        {/* <Row>
+        {/* /* { <Row>
             <Col xs={12} sm={4}>
                 <Card>
                     <Card.Body>
@@ -58,7 +58,7 @@ export const ProfileView ({ user, movies }) => {
             </Col>
         </Row>
        
-        <FavoriteMovies favoriteMovieList={favoriteMovieList} /> */}
+        <FavoriteMovies favoriteMovieList={favoriteMovieList} />/} */ */}
       
       </Container>
     );
