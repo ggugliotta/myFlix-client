@@ -1,29 +1,41 @@
-import React, { useEffect, useState} from 'react';
+import React, { useEffect, useState } from 'react';
 import { Container, Col, Row, Card } from 'react-bootstrap';
 import UserInfo from './user-info';
 import FavoriteMovies from './favorite-movies';
 import UpdateUser from './update-user';
 import './profile-view.scss';
 
-export const ProfileView ({ movies }) => {
-    const [user, setUser] = useState({
+export const ProfileView ({ user }) => {
+    const [user] = useState({
         Username: '',
         Email: '',
         FavoriteMovies: []
-    })
-    const favoriteMovies = movies.filter(m => user.FavoriteMovies.includes(m._id);
+    });
+    const favoriteMovies ({movies.filter}) => user.FavoriteMovies.includes(movie.id);
     const handleSubmit = (event) => {
         event.preventDefault();
-        console.log('Submitted');
     };
-    const handleRemove = (id) => {listMovie.list.filter((Id) => item.Id !=== id);
-    const handleUpdate = (e) => {};
+    const handleRemove(movies) => {movies.list.filter((movie) => movie.id);
+    const handleUpdate = (e) => {profile-view};
 
     useEffect(() => {
+              if (!token) return;
+      fetch ("https://moviesapi-zy5e.onrender.com/${favoriteMovies}", {
+        headers: { Authorization: `Bearer ${token}` }
+      })
+        .then((response) => response.json())
+        .then((movies) => {
+          const moviesFromApi = movies.map((movie) => {
+            return {
+              id: movie._id,
+              title: movie.Title,
+              imageURL: movie?.ImageUrl ?? movie?.ImagePath ?? '',
+            };
+          });
 
-    } 
-
-    }, []);
+          setMovies(moviesFromApi);
+        });
+    }, [token]);
 
     return (
       <Container>
