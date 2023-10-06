@@ -115,12 +115,12 @@ export const MainView = () => {
                   <Col>The list is empty!</Col>
                 ) : (
                   <Col md={8}>
-                    <ProfileView user={user} movies={movies} />
+                    <ProfileView users={users}/>
                   </Col>
                 )}
               </>
             }
-          /> */}
+          />  */}
           <Route
             path="/"
             element={
