@@ -1,30 +1,46 @@
 import React from 'react';
+import {Form, Button} from 'react-bootstrap';
 
 UpdateUser = ({handleSubmit, handleUpdate, user}) => {
     return (
-        <form className='profile-form' onSubmit={(e) => handleSubmit(e)}>
-            <h4>Update Form</h4>
-            <label>Username:</label>
-            <input
-                type='text'
-                name='Username'
-                defaultValue={user.Username}
-                onChange={e => handleUpdate(e)} />
-            <label>Password</label>
-            <input
-                type='password'
-                name='password'
-                defaultValue={user.Password}
-                onChange={e => handleUpdate(e)} />
-            
-            <label>Email address</label>
-            <input
-                type='email'
-                name='Email Address'
-                defaultValue={user.Email}
-                onChange={e => handleUpdate(e)} />
-            
+      <Form onSubmit={handleSubmit}>
+                  <Form.Group>
+                    <Form.Label>Username:</Form.Label>
+                      <Form.Control
+                        type="text"
+                        value={user.Username}
+                        onChange={(e) => handleUpdate(e)}
+                        required
+                        placeholder="Enter a username"
+                      />
+                  </Form.Group>
 
-        </form>
-    )
+                  <Form.Group>
+                    <Form.Label>Password:</Form.Label>
+                      <Form.Control
+                        type="password"
+                        value={user.Password}
+                        onChange={(e) => handleUpdate(e)}
+                        required
+                        minLength="8"
+                        placehoolder="Your password must be 8 or more characters"
+                     />
+                  </Form.Group>
+
+                  <Form.Group>
+                    <Form.Label>Email</Form.Label>
+                      <Form.Control
+                        type="email"
+                        value={user.Email}
+                        onChange={(e) => handleUpdate(e)}
+                        required
+                        placehoolder="Enter your email address"
+                     />
+                  </Form.Group>
+                  <Button variant="primary" type="submit"
+                    onClick={handleSubmit}>
+                    Submit
+                  </Button>
+                </Form>
+            )
 }
