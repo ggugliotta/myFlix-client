@@ -8,13 +8,13 @@ import './movie-card.scss';
 export const MovieCard = ({ movie }) => {
     return (
        <Card className="h-100">
-        <Card.Img variant="top" src={movie.imageURL} class="img-fluid" alt="Responsive image"/>
+        <Card.Img variant="top" src={movie.imageURL} className="img-fluid" alt="Responsive image"/>
         <Card.Body>
           <Card.Title>{movie.title}</Card.Title>
           <Card.Text>{movie.director.name} </Card.Text>
-          <Link to={`/movies/${encodeURIComponent(movie.Id)}`}>
+          <Link to={`/movies/${encodeURIComponent(movie.id)}`}>
             <Button variant="primary">Open</Button>
-          </Link> 
+          </Link>
         </Card.Body>
        </Card>
     );
@@ -35,4 +35,3 @@ MovieCard.propTypes = {
     rating: PropTypes.string.isRequired
   }).isRequired,
 };
-
