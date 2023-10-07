@@ -1,25 +1,21 @@
 import React from 'react';
-import Proptypes from 'proptypes';
-import Card from 'react-bootstrap';
+import PropTypes from 'prop-types';
+import { Col, Row, Card, Container } from 'react-bootstrap';
 
-export const UserCard = ({ user }) => {
-    return (
-      <Card classname="h-100">
-        <Card.Body>
-          <Card.Title>Your Information</Card.Title>
-            <Card.Text>
-              Name: {user.Name}
-              E-mail: {user.Email}
-              Birthday {user.Birthday}
-              Favorite Movies {user.favoriteMovies}
-            </Card.Text>
-        </Card.Body>
-      <Card/>
-    );
-  };
+export const UserInfo = ({ user }) => {
+  return (
+    <>
+      <Card.Title>Your Information</Card.Title>
+      <Card.Text>
+        Name: {user.Name}<br />
+        E-mail: {user.Email}
+      </Card.Text>
+    </>
+  );
+};
 
 
-UserCard.propTypes = {
+{/* UserCard.propTypes = {
   users: PropTypes.shape({
     name: PropTypes.string.isRequired,
     username: PropTypes.string.isRequired,
@@ -28,4 +24,4 @@ UserCard.propTypes = {
     birthday: PropTypes.number.isRequired,
     favoriteMovies: PropTypes.array.isRequired,
   }).isRequired,
-};
+}; */}

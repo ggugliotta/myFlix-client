@@ -4,7 +4,7 @@ import { MovieView } from "../movie-view/movie-view";
 import { LoginView } from "../login-view/login-view";
 import { SignupView } from "../signup-view/signup-view";
 import { NavigationBar } from "../navigation-bar/navigation-bar";
-// import { ProfileView } from "../profile-view/profile-view";
+import { ProfileView } from "../profile-view/profile-view";
 import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
@@ -46,6 +46,11 @@ export const MainView = () => {
       setUser(user);
       setToken(token);
     }
+
+    const syncUser = (user) => {
+      setUser(user);
+      localStorage.setItem('user', JSON.stringify(user));
+    };
 
     return (
        <BrowserRouter>
@@ -105,7 +110,7 @@ export const MainView = () => {
               </>
             }
           />
-          {/* <Route
+          <Route
             path="/profile"
             element={
               <>
@@ -115,12 +120,12 @@ export const MainView = () => {
                   <Col>The list is empty!</Col>
                 ) : (
                   <Col md={8}>
-                    <ProfileView users={users}/>
+                    <ProfileView user={user} movies={movies} token={token} syncUser={syncUser} />
                   </Col>
                 )}
               </>
             }
-          />  */}
+          />
           <Route
             path="/"
             element={
