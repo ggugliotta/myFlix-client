@@ -1,8 +1,7 @@
 //overwrite theme variables
 $theme-colors: (
-    "primary": purple,
+    "primary": #93C572,
     "danger": red,
 );
 
-$navbar: purple;
 @import '~bootstrap/scss/bootstrap.scss';

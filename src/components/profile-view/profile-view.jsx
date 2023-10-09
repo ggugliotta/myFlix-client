@@ -1,6 +1,6 @@
 import { Button, Modal, Container, Row, Col, Card, Form} from "react-bootstrap";
 import { Link } from "react-router-dom";
-//import { MovieCard } from '../movie-card/movie-card.jsx';
+import { MovieCard } from '../movie-card/movie-card.jsx';
 import { useState } from 'react';
 import "../profile-view/profile-view.scss";
 
@@ -145,7 +145,7 @@ export const ProfileView = ({ user, movies, token, syncUser }) => {
                 <h1 className="favorite-movies">Favorite Movies Collection</h1>
             </Col>
           </Row>
-          {/* <Row className="justify-content-center">
+         <Row className="justify-content-center">
             {result.map((movie) => (
               <Col className="mb-4" key={movie.id} xs={6} md={3} >
                 <MovieCard
@@ -156,7 +156,7 @@ export const ProfileView = ({ user, movies, token, syncUser }) => {
                   ></MovieCard>
               </Col>
             ))}
-          </Row> */}
+          </Row> 
     
 
         <Link to={`/`}>

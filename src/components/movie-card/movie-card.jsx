@@ -9,16 +9,12 @@ export const MovieCard = ({ movie }) => {
     return (
        <Card className="h-100">
         <Card.Img variant="top" src={movie.imageURL} alt="movie image" height="430 px" width="100%" />
-        <Card.Body>
-          <Card.Title className="text-center" margin-top="10"> {movie.title}</Card.Title>
-        </Card.Body>
         <Card.Footer>
           <Link to={`/movies/${encodeURIComponent(movie.id)}`}>
             <Button 
-              variant="primary"
+              className="stretched-link" 
               style={{ cursor: "pointer"}}
-            >
-                Open
+            >{movie.title}
             </Button>
           </Link>
         </Card.Footer>
@@ -37,7 +33,7 @@ MovieCard.propTypes = {
     imageURL: PropTypes.string.isRequired,
     featured: PropTypes.bool.isRequired,
     actors: PropTypes.array.isRequired,
-    releaseYear: PropTypes.number.isRequired,
+    releaseYear: PropTypes.instanceOf(Date).isRequired,
     rating: PropTypes.string.isRequired
   }).isRequired,
 };

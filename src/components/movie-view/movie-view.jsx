@@ -10,21 +10,34 @@ export const MovieView = ({ movies }) => {
   const movie = movies.find((m) => m.id === movieId);
   
    return (
-       <Card className="h-100">
-        <Card.Img variant="top" src={movie.imageURL} alt="movie image" height="600 px" width="100%" />
-        <Card.Body>
-          <Card.Title className="text-center" margin-top="10"> {movie.title}</Card.Title>
-        </Card.Body>
-        <Card.Footer>
-          <Link to={`/movies`}>
-            <Button 
-              variant="primary"
-              style={{ cursor: "pointer"}}
-            >
-                Back 
-            </Button>
-          </Link>
-        </Card.Footer>
+  <Row>
+    <Col>
+       <Card className="h-50">
+        <Card.Img variant="top" src={movie.imageURL} alt="movie image"/>
        </Card>
+      </Col>
+
+      <Col>
+        <Card>
+        <Card.Body className="h-50">
+          <Card.Title className="text-center" margin-top="10"> {movie.title}</Card.Title>
+          <Card.Text margin-top="10"> Description: {movie.description}</Card.Text>
+          <Card.Text margin-top="10"> Genre: {movie.genre.Name}</Card.Text>
+          <Card.Text margin-top="10">Director: {movie.director.Name}</Card.Text>
+          <Card.Text margin-top="10"> Release Year: {movie.releaseyear}</Card.Text>
+          <Card.Text margin-top="10"> Actors: {movie.actors}</Card.Text>
+          <Card.Text margin-top="10"> Rating: {movie.rating}</Card.Text>
+        </Card.Body>
+       </Card>
+    </Col>
+      <Link to={`/`}>
+        <Button 
+          variant="primary"
+          style={{ cursor: "pointer"}}
+          >
+            Back 
+        </Button>
+       </Link>
+  </Row>
     );
   };

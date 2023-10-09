@@ -5,8 +5,8 @@ import "./navigation-bar.scss";
 
 export const NavigationBar = ({ user, onLoggedOut }) => {
   return (
-    <Navbar bg="light" expand="lg">
-      <Container>
+    <Navbar bg="dark" expand="lg" className="ms-auto">
+      <Container className="container-fluid">
         <Navbar.Brand as={Link} to="/">
           Flickette
         </Navbar.Brand>
