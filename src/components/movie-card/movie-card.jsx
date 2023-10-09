@@ -8,14 +8,20 @@ import './movie-card.scss';
 export const MovieCard = ({ movie }) => {
     return (
        <Card className="h-100">
-        <Card.Img variant="top" src={movie.imageURL} className="img-fluid" alt="Responsive image"/>
+        <Card.Img variant="top" src={movie.imageURL} alt="movie image" height="430 px" width="100%" />
         <Card.Body>
-          <Card.Title>{movie.title}</Card.Title>
-          <Card.Text>{movie.director.name} </Card.Text>
-          <Link to={`/movies/${encodeURIComponent(movie.id)}`}>
-            <Button variant="primary">Open</Button>
-          </Link>
+          <Card.Title className="text-center" margin-top="10"> {movie.title}</Card.Title>
         </Card.Body>
+        <Card.Footer>
+          <Link to={`/movies/${encodeURIComponent(movie.id)}`}>
+            <Button 
+              variant="primary"
+              style={{ cursor: "pointer"}}
+            >
+                Open
+            </Button>
+          </Link>
+        </Card.Footer>
        </Card>
     );
   };

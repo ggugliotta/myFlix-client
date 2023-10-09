@@ -2,53 +2,29 @@ import React from "react";
 import { useParams } from "react-router";
 import { Link } from "react-router-dom";
 import './movie-view.scss';
-import {Button} from "react-bootstrap";
+import {Button, Card, Container, Col, Row} from "react-bootstrap";
 
 export const MovieView = ({ movies }) => {
   const { movieId } = useParams();
 
   const movie = movies.find((m) => m.id === movieId);
-
-  return (
-    <div>
-      <div>
-        <img className="w-100" src={movie.imageURL} />
-      </div>
-      <div>
-        <span><strong>Movie:</strong></span>
-        <span>{movie.title}</span>
-      </div>
-      <div>
-        <span><strong>Director:</strong></span>
-        <span>{movie.director.Name}</span>
-      </div>
-      <div>
-        <span><strong>Description:</strong></span>
-        <span>{movie.description}</span>
-    </div>
-    <div>
-        <span><strong>Genre:</strong></span>
-        <span>{movie.genre.Name}</span>
-    </div>
-    <div>
-        <span><strong>Genre:</strong></span>
-        <span>{movie.genre.Description}</span>
-    </div>
-    <div>
-        <span><strong>Actors:</strong></span>
-        <span>{movie.actors}</span>
-    </div>
-    <div>
-        <span><strong>Release Year:</strong></span>
-        <span>{movie.releaseyear}</span>
-    </div>
-    <div>
-        <span><strong>Rating:</strong></span>
-        <span>{movie.rating}</span>
-    </div>
-      <Link to={`/`}>
-        <Button className="back-button">Back</Button>
-      </Link>
-    </div>
-  );
-};
+  
+   return (
+       <Card className="h-100">
+        <Card.Img variant="top" src={movie.imageURL} alt="movie image" height="600 px" width="100%" />
+        <Card.Body>
+          <Card.Title className="text-center" margin-top="10"> {movie.title}</Card.Title>
+        </Card.Body>
+        <Card.Footer>
+          <Link to={`/movies`}>
+            <Button 
+              variant="primary"
+              style={{ cursor: "pointer"}}
+            >
+                Back 
+            </Button>
+          </Link>
+        </Card.Footer>
+       </Card>
+    );
+  };

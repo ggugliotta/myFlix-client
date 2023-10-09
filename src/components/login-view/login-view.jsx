@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Button, Form, Card, CardGroup, Container, Col, Row } from 'react-bootstrap';
+import { Button, Form, Card, CardGroup, Container, Col, Row, Spinner} from 'react-bootstrap';
 
 export const LoginView = ({ onLoggedIn }) => {
   const [username, setUsername] = useState("");
@@ -75,6 +75,15 @@ export const LoginView = ({ onLoggedIn }) => {
           </CardGroup>
          </Col>
       </Row>
+      {/* <div class="spinner-wrapper">
+        <Spinner class="spinner-border text-primary" animation="border" role="status">
+          <span className="visually-hidden">Loading...</span>
+            window.addEventListener('load', () => {
+               spinnerWrapper.style.opacity = "0";
+            setTimeout(() => {}, 200);
+             });
+        </Spinner>
+      </div> */}
    </Container>
   );
 }
