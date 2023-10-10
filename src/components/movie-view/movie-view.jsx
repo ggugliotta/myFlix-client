@@ -8,7 +8,7 @@ export const MovieView = ({ movies }) => {
   const { movieId } = useParams();
 
   const movie = movies.find((m) => m.id === movieId);
-  
+
    return (
   <Row>
     <Col>
@@ -24,18 +24,18 @@ export const MovieView = ({ movies }) => {
           <Card.Text margin-top="10"> Description: {movie.description}</Card.Text>
           <Card.Text margin-top="10"> Genre: {movie.genre.Name}</Card.Text>
           <Card.Text margin-top="10">Director: {movie.director.Name}</Card.Text>
-          <Card.Text margin-top="10"> Release Year: {movie.releaseyear}</Card.Text>
+          <Card.Text margin-top="10"> Release Year: {movie.releaseYear}</Card.Text>
           <Card.Text margin-top="10"> Actors: {movie.actors}</Card.Text>
           <Card.Text margin-top="10"> Rating: {movie.rating}</Card.Text>
         </Card.Body>
        </Card>
     </Col>
       <Link to={`/`}>
-        <Button 
+        <Button
           variant="primary"
           style={{ cursor: "pointer"}}
           >
-            Back 
+            Back
         </Button>
        </Link>
   </Row>
