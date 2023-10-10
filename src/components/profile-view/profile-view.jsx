@@ -76,7 +76,7 @@ export const ProfileView = ({ user, movies, token, syncUser }) => {
     <Container>
 
       <Row className="justify-content-left">
-        <Col md={2}>
+        <Col md={8}>
           
     
           <h1 className='profile'>My Profile</h1>
@@ -147,8 +147,8 @@ export const ProfileView = ({ user, movies, token, syncUser }) => {
       </Row>
   
 
-      <Row className="mt-4">
-        <Col md={4}>
+      <Row className="justify-content-center" mt-3>
+        <Col md={8}>
           <Card>
               <Card.Title>Favorite Movies Collection</Card.Title>
             </Card>
