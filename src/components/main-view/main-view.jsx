@@ -129,7 +129,7 @@ export const MainView = () => {
                       </Spinner>
                   </Col>
                 ) : (
-                  <Col md={1}>
+                  <Col md={8}>
                     <ProfileView user={user} movies={movies} token={token} syncUser={syncUser} />
                   </Col>
                 )}
@@ -151,7 +151,7 @@ export const MainView = () => {
                 ) : (
                   <>
                     {movies.map((movie) => (
-                      <Col xl={2} className="mb-4" key={movie.id} md={3}>
+                      <Col ml={3} mr={4} xl={4} className="mb-4" key={movie.id} md={3}>
                         <MovieCard movie={movie} />
                       </Col>
                     ))}

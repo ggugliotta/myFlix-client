@@ -7,7 +7,7 @@ import './movie-card.scss';
 //MovieCard Function Component
 export const MovieCard = ({ movie }) => {
     return (
-       <Card className="h-100">
+       <Card>
         <Card.Img variant="top" src={movie.imageURL} alt="movie image" height="250 px" width="auto" />
         <Card.Body>
           <Card.Title>{movie.title}</Card.Title>
