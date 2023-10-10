@@ -74,8 +74,11 @@ export const ProfileView = ({ user, movies, token, syncUser }) => {
 
   return (
     <Container>
-      <Row className="justify-content-center">
+
+      <Row className="justify-content-left">
         <Col md={8}>
+          
+    
           <h1 className='profile'>My Profile</h1>
 
           <Card>
@@ -142,23 +145,16 @@ export const ProfileView = ({ user, movies, token, syncUser }) => {
           </Form>
         </Col>
       </Row>
+  
 
-      <Row className="justify-content-center mt-3">
+      <Row className="mt-4">
         <Col md={8}>
-            <h1 className="favorite-movies">Favorite Movies Collection</h1>
-        </Col>
-        {result.map((movie) => (
-          <Col className="mb-4" key={movie.id} xs={6} md={3} >
-            <MovieCard
-              movie={movie}
-              user={user}
-              token={token}
-              setUser={setUser}
-              ></MovieCard>
+          <Card>
+              <Card.Title>Favorite Movies Collection</Card.Title>
+            </Card>
           </Col>
-        ))}
       </Row>
-
+  
       <Modal>
         show={showModal} onHide={handleCloseModal}
         <Modal.Header closeButton>
