@@ -95,6 +95,7 @@ export const ProfileView = ({ user, movies, token, syncUser }) => {
 
           <Form className='profile-form' onSubmit={(e) => handleSubmit(e)}>
             <Form.Group className="mb-3">
+              <h2>Update information</h2>
               <Form.Label>Email</Form.Label>
               <Form.Control
                 type="email"

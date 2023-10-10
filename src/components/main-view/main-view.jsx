@@ -7,6 +7,7 @@ import { NavigationBar } from "../navigation-bar/navigation-bar";
 import { ProfileView } from "../profile-view/profile-view";
 import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
+import {Spinner} from "react-bootstrap";
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 
 export const MainView = () => {
@@ -101,7 +102,11 @@ export const MainView = () => {
                 {!user ? (
                   <Navigate to="/login" replace />
                 ) : movies.length === 0 ? (
-                  <Col>The list is empty!</Col>
+                  <Col md={10} class="spinner=wrapper">
+                      <Spinner class="spinner-border text-primary" animation="border" role="status">
+                      <span className="visually-hidden">Loading...</span>
+                      </Spinner>
+                  </Col>
                 ) : (
                   <Col md={10}>
                     <MovieView movies={movies} />
@@ -117,9 +122,13 @@ export const MainView = () => {
                 {!user ? (
                   <Navigate to="/login" replace />
                 ) : movies.length === 0 ? (
-                  <Col>The list is empty!</Col>
+                  <Col xl={1} class="spinner=wrapper">
+                      <Spinner class="spinner-border text-primary" animation="border" role="status">
+                      <span className="visually-hidden">Loading...</span>
+                      </Spinner>
+                  </Col>
                 ) : (
-                  <Col md={8}>
+                  <Col xl={1}>
                     <ProfileView user={user} movies={movies} token={token} syncUser={syncUser} />
                   </Col>
                 )}
@@ -133,7 +142,11 @@ export const MainView = () => {
                 {!user ? (
                   <Navigate to="/login" replace />
                 ) : movies.length === 0 ? (
-                  <Col>The list is empty!</Col>
+                  <Col xl={1} class="spinner=wrapper">
+                      <Spinner class="spinner-border text-primary" animation="border" role="status">
+                      <span className="visually-hidden">Loading...</span>
+                      </Spinner>
+                  </Col>
                 ) : (
                   <>
                     {movies.map((movie) => (
