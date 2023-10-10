@@ -10,7 +10,8 @@ export const MovieCard = ({ movie }) => {
        <Card className="h-100">
         <Card.Img variant="top" src={movie.imageURL} alt="movie image" height="250 px" width="auto" />
         <Card.Body>
-          <Card.Text>{movie.description}</Card.Text>
+          <Card.Title>{movie.title}</Card.Title>
+          <Card.Text><Badge pill bg= "primary">{movie.rating}</Badge></Card.Text>
           <Link to={`/movies/${encodeURIComponent(movie.id)}`}
               className="stretched-link"
               style={{ cursor: "pointer"}}
