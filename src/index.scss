@@ -1,0 +1,7 @@
+//overwrite theme variables
+$theme-colors: (
+    "primary": #93C572,
+    "danger": red,
+);
+
+@import '~bootstrap/scss/bootstrap.scss';
