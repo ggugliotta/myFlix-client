@@ -8,8 +8,8 @@ import "./index.scss";
 // Main component (will eventually use all the others)
 const MyFlixApplication = () => {
   return (
-    <Container fluid style={{paddingLeft: '0px', paddingRight: '0px'}}>
-      <Row noGutters>
+    <Container>
+      <Row>
         <MainView />
       </Row>
     </Container>
