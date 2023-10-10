@@ -62,7 +62,7 @@ export const MainView = () => {
             localStorage.clear();
           }}
         />
-        <Row className="justify-content-md-center">
+        <Row className="justify-content-md-center mt-2 mt-sm-3 mt-md-4">
           <Routes>
             <Route
              path="/signup"
@@ -103,7 +103,7 @@ export const MainView = () => {
                 ) : movies.length === 0 ? (
                   <Col>The list is empty!</Col>
                 ) : (
-                  <Col md={8}>
+                  <Col md={10}>
                     <MovieView movies={movies} />
                   </Col>
                 )}
