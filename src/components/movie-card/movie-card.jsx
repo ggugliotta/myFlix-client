@@ -11,8 +11,8 @@ export const MovieCard = ({ movie }) => {
         <Card.Img variant="top" src={movie.imageURL} alt="movie image" height="430 px" width="100%" />
         <Card.Footer>
           <Link to={`/movies/${encodeURIComponent(movie.id)}`}>
-            <Button 
-              className="stretched-link" 
+            <Button
+              className="stretched-link"
               style={{ cursor: "pointer"}}
             >{movie.title}
             </Button>
@@ -33,7 +33,7 @@ MovieCard.propTypes = {
     imageURL: PropTypes.string.isRequired,
     featured: PropTypes.bool.isRequired,
     actors: PropTypes.array.isRequired,
-    releaseYear: PropTypes.instanceOf(Date).isRequired,
+    releaseYear: PropTypes.number.isRequired,
     rating: PropTypes.string.isRequired
   }).isRequired,
 };
