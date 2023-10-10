@@ -1,13 +1,12 @@
-import { Container, Nav } from "react-bootstrap";
+import {  Nav } from "react-bootstrap";
 import Navbar from 'react-bootstrap/Navbar';
 import { Link } from "react-router-dom";
 import "./navigation-bar.scss";
 
 export const NavigationBar = ({ user, onLoggedOut }) => {
   return (
-    <Navbar bg="dark" expand="xl" className="ms-auto">
-      <Container className="container-fluid">
-        <Navbar.Brand as={Link} to="/">
+        <Navbar bg="dark" expand="xl" className="ms-auto">
+        <Navbar.Brand as={Link} to="/" mr-auto>
           Flickette
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
@@ -40,7 +39,7 @@ export const NavigationBar = ({ user, onLoggedOut }) => {
             )}
           </Nav>
         </Navbar.Collapse>
-      </Container>
     </Navbar>
   );
 };
+

@@ -1,15 +1,17 @@
 import { createRoot } from "react-dom/client";
 
 import { MainView } from "./components/main-view/main-view";
-import Container from "react-bootstrap/Container";
+import { Container, Row } from "react-bootstrap";
 
 import "./index.scss";
 
 // Main component (will eventually use all the others)
 const MyFlixApplication = () => {
   return (
-    <Container>
-      <MainView />
+    <Container fluid style={{paddingLeft: '0px', paddingRight: '0px'}}>
+      <Row noGutters>
+        <MainView />
+      </Row>
     </Container>
   );
 };

@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import './movie-view.scss';
 import {Button, Card, Container, Col, Row, Badge, ListGroup} from "react-bootstrap";
 
+
 export const MovieView = ({ movies }) => {
   const { movieId } = useParams();
 

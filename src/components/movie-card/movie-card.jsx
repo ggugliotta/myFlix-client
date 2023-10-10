@@ -8,16 +8,11 @@ import './movie-card.scss';
 export const MovieCard = ({ movie }) => {
     return (
        <Card className="h-100">
-        <Card.Img variant="top" src={movie.imageURL} alt="movie image" height="400 px" width="100%" />
-        <Card.Footer>
+        <Card.Img variant="top" src={movie.imageURL} alt="movie image" height="250 px" width="auto" />
           <Link to={`/movies/${encodeURIComponent(movie.id)}`}>
-            <Button
               className="stretched-link"
-              style={{ cursor: "pointer"}}
-            >{movie.title}
-            </Button>
+              style={{ cursor: "pointer"}}   
           </Link>
-        </Card.Footer>
        </Card>
     );
   };

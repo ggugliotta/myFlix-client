@@ -62,6 +62,7 @@ export const MainView = () => {
             setToken(null);
             localStorage.clear();
           }}
+
         />
         <Row className="justify-content-md-center mt-2 mt-sm-3 mt-md-4">
           <Routes>
@@ -150,7 +151,7 @@ export const MainView = () => {
                 ) : (
                   <>
                     {movies.map((movie) => (
-                      <Col className="mb-4" key={movie.id} md={3}>
+                      <Col xl={2} className="mb-4" key={movie.id} md={3}>
                         <MovieCard movie={movie} />
                       </Col>
                     ))}

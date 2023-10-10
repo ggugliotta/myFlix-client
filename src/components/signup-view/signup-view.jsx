@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-import { Form, Button, Card, CardGroup, Container, Col, Row} from "react-bootstrap";
+import { Form, Button, Container, Col, Row} from "react-bootstrap";
+//import { Link } from 'react-router-dom';
 
 export const SignupView = () => {
   const [name, setName] = useState("");
@@ -39,11 +40,8 @@ export const SignupView = () => {
     <Container>
       <Row>
         <Col>
-          <CardGroup>
-            <Card>
-              <Card.Title></Card.Title>
-                <Card.Body>
-                  <Form onSubmit={handleSubmit}>
+            <div>Welcome to</div> <br></br><h1>Flickette</h1>
+             <Form onSubmit={handleSubmit}>
                     <Form.Group controlId="formName">
                       <Form.Label>Name:</Form.Label>
                          <Form.Control
@@ -95,16 +93,16 @@ export const SignupView = () => {
                             required
                           />
                       </Form.Group>
-                      <Button variant="primary" type="submit">
-                         Submit
+                      <Button className="align-center" variant="primary" type="submit">
+                         Signup 
                       </Button>
-                    </Form>
-                </Card.Body>
-            </Card>
-          </CardGroup>
+                    </Form> 
+                    {/* <div>
+                       <Link to="/login">Already have an account?</Link>
+                    </div> */}
+ 
         </Col>
       </Row>
     </Container>
-    
   );
 };
