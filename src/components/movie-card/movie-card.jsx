@@ -17,9 +17,6 @@ export const MovieCard = ({ movie }) => {
               >
           </Link>
         </Card.Body>
-        <Card.Footer>
-          <Card.Subtitle className="fs-6 fw-light">{movie.genre.Name}</Card.Subtitle>
-        </Card.Footer>
        </Card>
     );
   };

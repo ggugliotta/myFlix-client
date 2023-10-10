@@ -27475,20 +27475,6 @@ const MovieCard = ({ movie })=>{
                 fileName: "src/components/movie-card/movie-card.jsx",
                 lineNumber: 12,
                 columnNumber: 9
-            }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Card).Footer, {
-                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Card).Subtitle, {
-                    className: "fs-6 fw-light",
-                    children: movie.genre.Name
-                }, void 0, false, {
-                    fileName: "src/components/movie-card/movie-card.jsx",
-                    lineNumber: 21,
-                    columnNumber: 11
-                }, undefined)
-            }, void 0, false, {
-                fileName: "src/components/movie-card/movie-card.jsx",
-                lineNumber: 20,
-                columnNumber: 9
             }, undefined)
         ]
     }, void 0, true, {
