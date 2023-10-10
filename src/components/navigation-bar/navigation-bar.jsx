@@ -6,7 +6,7 @@ import "./navigation-bar.scss";
 export const NavigationBar = ({ user, onLoggedOut }) => {
   return (
         <Navbar bg="dark" expand="xl" className="ms-auto">
-        <Navbar.Brand as={Link} to="/" mr-auto>
+        <Navbar.Brand as={Link} to="/" ml="0.25">
           Flickette
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />

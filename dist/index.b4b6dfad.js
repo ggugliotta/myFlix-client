@@ -27374,9 +27374,8 @@ const MainView = ()=>{
                                     }, void 0, false, void 0, void 0)
                                 }, void 0, false, void 0, void 0) : /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
                                     children: movies.map((movie)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _colDefault.default), {
-                                            ml: 3,
-                                            mr: 4,
-                                            xl: 4,
+                                            ml: 10,
+                                            mr: 10,
                                             className: "mb-4",
                                             md: 3,
                                             children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _movieCard.MovieCard), {
@@ -48111,7 +48110,7 @@ const NavigationBar = ({ user, onLoggedOut })=>{
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _navbarDefault.default).Brand, {
                 as: (0, _reactRouterDom.Link),
                 to: "/",
-                "mr-auto": true,
+                ml: "0.25",
                 children: "Flickette"
             }, void 0, false, {
                 fileName: "src/components/navigation-bar/navigation-bar.jsx",
