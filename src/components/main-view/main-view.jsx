@@ -129,7 +129,7 @@ export const MainView = () => {
                       </Spinner>
                   </Col>
                 ) : (
-                  <Col xl={1}>
+                  <Col md={1}>
                     <ProfileView user={user} movies={movies} token={token} syncUser={syncUser} />
                   </Col>
                 )}

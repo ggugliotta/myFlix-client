@@ -27340,7 +27340,7 @@ const MainView = ()=>{
                                         }, void 0, false, void 0, void 0)
                                     }, void 0, false, void 0, void 0)
                                 }, void 0, false, void 0, void 0) : /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _colDefault.default), {
-                                    xl: 1,
+                                    md: 1,
                                     children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _profileView.ProfileView), {
                                         user: user,
                                         movies: movies,
@@ -27459,7 +27459,7 @@ const MovieCard = ({ movie })=>{
                         columnNumber: 11
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Card).Text, {
-                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(Badge, {
+                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Badge), {
                             pill: true,
                             bg: "primary",
                             children: movie.rating
