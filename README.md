@@ -4,9 +4,7 @@
 
 <h1 align="center">Welcome to the client-side of Flickette </h1>
 
-- 🔭 This application is a single-page app (SPA) responsive app with routing, interactions, multiple interface views, and a contemporary user experience. Flickette is a movie application built for movie fans who enjoy learning information about a variety of films. Users are able to access this application whenever they want to read and save information about their favorite movies. This app is [hosted online](flickette.netlify.app) and can be viewed on any device at any time anywhere for complete user experience. 
-
-This [client-side project](github.com/ggugliotta/myFlix-client-side) supports the [server-side portion of this application](github.com/ggugliotta/movie-app) and was created to facilitate user requests and render responses from the server-side via multiple interface views. This app was built in ES2015+ with the full MERN stack (MongoDB, Express, React library, Node.js), and bootstrap UI library. A full list of project dependencies are outlined below. 
+- 🔭 This application is a single-page app (SPA) responsive app with routing, interactions, multiple interface views, and a contemporary user experience. Flickette is a movie application built for movie fans who enjoy learning information about a variety of films. Users are able to access this application whenever they want to read and save information about their favorite movies. This app is [hosted online](flickette.netlify.app) and can be viewed on any device at any time anywhere for complete user experience. This [client-side project](github.com/ggugliotta/myFlix-client-side) supports the [server-side portion of this application](github.com/ggugliotta/movie-app) and was created to facilitate user requests and render responses from the server-side via multiple interface views. This app was built in ES2015+ with the full MERN stack (MongoDB, Express, React library, Node.js), and bootstrap UI library. A full list of project dependencies are outlined below. 
 
 - Build Tool: To get this project running, I used @parcel/transformer-sass version 2.9.3, parcel version 2.9.3, and process 0.11.10. 
 
@@ -25,7 +23,7 @@ react-bootstrap version 2.9.0, react-dom version 18.2.0, react-redux 8.1.3, reac
 
 - 📄 Know about my experiences [linkedin.com/gabriella-gugliotta](linkedin.com/gabriella-gugliotta)
 
-- ⚡ Fun fact **I just learned how to use jQuery, Render, and noSQL (mongoose/MongoDB).**
+- ⚡ Fun fact **I just learned how to use Redux**
 
 <h3 align="left">Connect with me:</h3>
 <p align="left">
