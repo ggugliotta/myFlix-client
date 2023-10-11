@@ -9,11 +9,13 @@ import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
 import {Spinner} from "react-bootstrap";
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
+import { useSelector, useDispatch } from "react-redux";
+import { setMovies } from "../../redux/reducers/movies";
 
 export const MainView = () => {
     const storedUser = JSON.parse(localStorage.getItem("user"));
     const storedToken = localStorage.getItem("token");
-    const [movies, setMovies] = useState([]);
+    const movies = useSelector((state) => state.movies.value);
     const [user, setUser] = useState(storedUser? storedUser : null);
     const [token, setToken] = useState(storedToken? storedToken: null);
 
@@ -39,7 +41,7 @@ export const MainView = () => {
             };
           });
 
-          setMovies(moviesFromApi);
+          dispatchEvent(setMovies(moviesFromApi));
         });
     }, [token]);
 
