@@ -13,7 +13,7 @@ react-bootstrap version 2.9.0, react-dom version 18.2.0, react-redux 8.1.3, reac
 
 - My movie app utilizes [render](render.com) to connect with my [API](www.mongodb.com) and [netlify](netlify.com)for the front-end server. View here: [flickette.netlify.app](flickette.netlify.app)
 
-- 🌱 I’m currently learning **how to use the React framework for the front-end portion of my API.**
+- 🌱 I’m currently learning **filtering and creating a search bar UI with redux**
 
 - 👨‍💻 All of my projects are available at [github.com/ggugliotta](github.com/ggugliotta)
 
@@ -21,9 +21,9 @@ react-bootstrap version 2.9.0, react-dom version 18.2.0, react-redux 8.1.3, reac
 
 - 📫 Reach me at **gabriellagugliotta96@gmail.com**
 
-- 📄 Know about my experiences [linkedin.com/gabriella-gugliotta](linkedin.com/gabriella-gugliotta)
+- 📄 Learn more about me [linkedin.com/gabriella-gugliotta](linkedin.com/gabriella-gugliotta)
 
-- ⚡ Fun fact **I just learned how to use Redux**
+- ⚡ Fun fact **My next goal is to learn Python!**
 
 <h3 align="left">Connect with me:</h3>
 <p align="left">
