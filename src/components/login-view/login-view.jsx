@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Button, Form, Card, CardGroup, Container, Col, Row, Spinner} from 'react-bootstrap';
+import { Form, Card, CardGroup, Container, Col, Row, Button } from 'react-bootstrap';
 
 
 export const LoginView = ({ onLoggedIn }) => {
@@ -28,7 +28,7 @@ export const LoginView = ({ onLoggedIn }) => {
         if (data.user) {
             localStorage.setItem("user", JSON.stringify(data.user));
             localStorage.setItem("token", data.token);
-            onLoggedIn(data.user, data.token);
+            onLoggedIn(setUser(username));
         } else {
           alert("No such user");
         }

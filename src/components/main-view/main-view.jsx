@@ -15,8 +15,8 @@ import { setMovies } from "../../redux/reducers/movies";
 export const MainView = () => {
     const storedUser = JSON.parse(localStorage.getItem("user"));
     const storedToken = localStorage.getItem("token");
-    const movies = useSelector((state) => state.movies.value);
-    const [user, setUser] = useState(storedUser? storedUser : null);
+    const movies = useSelector((state) => state.movies.list);
+    const user = useSelector((state) => state.user);
     const [token, setToken] = useState(storedToken? storedToken: null);
 
     useEffect(() => {
@@ -41,7 +41,7 @@ export const MainView = () => {
             };
           });
 
-          dispatchEvent(setMovies(moviesFromApi));
+          dispatch(setMovies(moviesFromApi));
         });
     }, [token]);
 
@@ -57,15 +57,16 @@ export const MainView = () => {
 
     return (
        <BrowserRouter>
-        <NavigationBar
-          user={user}
-          onLoggedOut={() => {
-            setUser(null);
-            setToken(null);
-            localStorage.clear();
-          }}
-
-        />
+        <Row>
+          <NavigationBar
+            user={user}
+            onLoggedOut={() => {
+              setUser(null);
+              setToken(null);
+              localStorage.clear();
+            }}
+            />
+        </Row>
         <Row className="justify-content-md-center mt-2 mt-sm-3 mt-md-4">
           <Routes>
             <Route
@@ -73,14 +74,13 @@ export const MainView = () => {
              element={
               <>
                 {user ? (
-                  <Navigate to="/" />
+                  <Navigate to="/" replace />
                 ) : (
                   <Col md={5}>
                     <SignupView />
                   </Col>
                 )}
               </>
-
             }
           />
           <Route
@@ -88,14 +88,13 @@ export const MainView = () => {
             element={
               <>
                 {user ? (
-                  <Navigate to="/" />
+                  <Navigate to="/" replace />
                 ) : (
                   <Col md={5}>
                     <LoginView onLoggedIn={onLoggedIn} />
                   </Col>
                 )}
               </>
-
             }
           />
           <Route
@@ -111,8 +110,8 @@ export const MainView = () => {
                       </Spinner>
                   </Col>
                 ) : (
-                  <Col md={10}>
-                    <MovieView movies={movies} />
+                  <Col md={8}>
+                    <MovieView />
                   </Col>
                 )}
               </>
@@ -141,25 +140,7 @@ export const MainView = () => {
           <Route
             path="/"
             element={
-              <>
-                {!user ? (
-                  <Navigate to="/login" replace />
-                ) : movies.length === 0 ? (
-                  <Col xl={1} class="spinner=wrapper">
-                      <Spinner class="spinner-border text-primary" animation="border" role="status">
-                      <span className="visually-hidden">Loading...</span>
-                      </Spinner>
-                  </Col>
-                ) : (
-                  <>
-                    {movies.map((movie) => (
-                      <Col ml={10} mr={10} className="mb-4" key={movie.id} md={3}>
-                        <MovieCard movie={movie} />
-                      </Col>
-                    ))}
-                  </>
-                )}
-              </>
+              <>{!user ? <Navigate to="/login" replace /> : <BooksList />}</>
             }
           />
         </Routes>
