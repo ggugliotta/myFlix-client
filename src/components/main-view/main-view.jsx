@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { MoviesList } from "../movie-list/movie-list";
+import { MoviesList } from "../movies-list/movies-list";
 import { MovieView } from "../movie-view/movie-view";
 import { LoginView } from "../login-view/login-view";
 import { SignupView } from "../signup-view/signup-view";

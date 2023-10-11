@@ -12,21 +12,37 @@ export const ProfileView = ({ user, movies, token, syncUser }) => {
   const [birthday, setBirthday] = useState(user.Birthday);
   const [showModal, setShowModal] = useState(false);
 
-  const favoriteMovies = movies.filter((movie) => {
-    return user.FavoriteMovies.includes(movie.id)
-  });
+  // const favoriteMovies = movies.filter((movie) => {
+  //   return user.FavoriteMovies.includes(movie.id)
+  // });
 
-  let result = movies.filter((movie) => user.FavoriteMovies.includes(movie.title));
+  // let result = movies.filter((movie) => user.FavoriteMovies.includes(movie.title));
 
   const handleShowModal = () => setShowModal(true);
   const handleCloseModal = () => setShowModal(false);
+
+  const handleDeleteUser = () => {
+    fetch(`https://moviesapi-zy5e.onrender.com/users/${user.Username}`, {
+      method: "DELETE",
+      headers: {
+        Authorization: `Bearer $ token`
+      }
+    }).then((response) => {
+          if (response.ok) {
+                setUser(null);
+                alert("your account has successfully been deleted")
+          } else {
+                 alert("something went wrong")
+          }
+    })
+  }
 
   const handleSubmit = (event) => {event.preventDefault();
     let data = {
       Username: username,
       Name: name,
       Email: email,
-      Birthday: birthday
+      Birthday: birthday,
     };
 
     if(password) {
@@ -55,22 +71,6 @@ export const ProfileView = ({ user, movies, token, syncUser }) => {
       // }
     })
   };
-
-  const handleDeleteUser = () => {
-    fetch(`https://moviesapi-zy5e.onrender.com/users/${user.Username}`, {
-      method: "DELETE",
-      headers: {
-        Authorization: `Bearer $ token`
-      }
-    }).then((response) => {
-          if (response.ok) {
-                setUser(null);
-                alert("your account has successfully been deleted")
-          } else {
-                 alert("something went wrong")
-          }
-    })
-  }
 
   return (
     <Container>
@@ -155,8 +155,8 @@ export const ProfileView = ({ user, movies, token, syncUser }) => {
           </Col>
       </Row>
   
-      <Modal>
-        show={showModal} onHide={handleCloseModal}
+      <Modal
+        show={showModal} onHide={handleCloseModal}>
         <Modal.Header closeButton>
           <Modal.Title>Delete Account</Modal.Title>
           <Modal.Body>Are you sure you want to delete your account? This action is permanent.
