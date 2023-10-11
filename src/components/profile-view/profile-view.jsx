@@ -12,11 +12,11 @@ export const ProfileView = ({ user, movies, token, syncUser }) => {
   const [birthday, setBirthday] = useState(user.Birthday);
   const [showModal, setShowModal] = useState(false);
 
-  // const favoriteMovies = movies.filter((movie) => {
-  //   return user.FavoriteMovies.includes(movie.id)
-  // });
+  const favoriteMovies = movies.filter((movie) => {
+   return user.FavoriteMovies.includes(movie.id)
+   });
 
-  // let result = movies.filter((movie) => user.FavoriteMovies.includes(movie.title));
+  let result = movies.filter((movie) => user.FavoriteMovies.includes(movie.title));
 
   const handleShowModal = () => setShowModal(true);
   const handleCloseModal = () => setShowModal(false);
@@ -65,10 +65,6 @@ export const ProfileView = ({ user, movies, token, syncUser }) => {
     }).then((data) => {
       console.log(data)
       syncUser(data)
-      // if (data) {
-      //   localStorage.setItem("user", JSON.stringify(data));
-      //   setUser(data);
-      // }
     })
   };
 
