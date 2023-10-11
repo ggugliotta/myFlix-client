@@ -2,13 +2,24 @@
  <h1 align="center">Hi 👋, I'm Gabriella Gugliotta</h1>
 <h3 align="center">A passionate full stack developer from the United States</h3>
 
-- 🔭 I’m currently working on a [movie API! Watch my progress here](github.com/ggugliotta/myFlix-client-side)
+<h1 align="center">Welcome to the client-side of Flickette </h1>
+
+- 🔭 This application is a single-page app (SPA) responsive app with routing, interactions, multiple interface views, and a contemporary user experience. Flickette is a movie application built for movie fans who enjoy learning information about a variety of films. Users are able to access this application whenever they want to read and save information about their favorite movies. This app is [hosted online](flickette.netlify.app) and can be viewed on any device at any time anywhere for complete user experience. 
+
+This [client-side project](github.com/ggugliotta/myFlix-client-side) supports the [server-side portion of this application](github.com/ggugliotta/movie-app) and was created to facilitate user requests and render responses from the server-side via multiple interface views. This app was built in ES2015+ with the full MERN stack (MongoDB, Express, React library, Node.js), and bootstrap UI library. A full list of project dependencies are outlined below. 
+
+- Build Tool: To get this project running, I used @parcel/transformer-sass version 2.9.3, parcel version 2.9.3, and process 0.11.10. 
+
+- Project dependencies include: @reduxjs/toolkit version 1.9.7, bootstrap version 5.3.2       js-tokens version 4.0.0,loose-envify version 1.4.0, prop-types version 15.8.1, react 18.2.0, 
+react-bootstrap version 2.9.0, react-dom version 18.2.0, react-redux 8.1.3, react-router 6.16.0, react-router-dom version 6.16.0, and scheduler version 0.16.0.
+
+- My movie app utilizes render to connect with my API (stored on MongodAtlas) and netlify for the front-end server. View here: [flickette.netlify.app](flickette.netlify.app)
 
 - 🌱 I’m currently learning **how to use the React framework for the front-end portion of my API.**
 
 - 👨‍💻 All of my projects are available at [github.com/ggugliotta](github.com/ggugliotta)
 
-- 💬 Ask me about **how I like working with React and node.js!**
+- 💬 Ask me about **how I like working with the MERN stack, boostrap, and redux!**
 
 - 📫 Reach me at **gabriellagugliotta96@gmail.com**
 
