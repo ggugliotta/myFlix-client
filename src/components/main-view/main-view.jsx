@@ -1,5 +1,5 @@
-import { useState, useEffect } from "react";
-import { MovieCard } from "../movie-card/movie-card";
+import { useEffect } from "react";
+import { MoviesList } from "../movie-list/movie-list";
 import { MovieView } from "../movie-view/movie-view";
 import { LoginView } from "../login-view/login-view";
 import { SignupView } from "../signup-view/signup-view";
@@ -18,6 +18,7 @@ export const MainView = () => {
     const movies = useSelector((state) => state.movies.list);
     const user = useSelector((state) => state.user);
     const [token, setToken] = useState(storedToken? storedToken: null);
+    const dispatch = useDispatch();
 
     useEffect(() => {
       if (!token) return;
@@ -140,7 +141,7 @@ export const MainView = () => {
           <Route
             path="/"
             element={
-              <>{!user ? <Navigate to="/login" replace /> : <BooksList />}</>
+              <>{!user ? <Navigate to="/login" replace /> : <MoviesList />}</>
             }
           />
         </Routes>
