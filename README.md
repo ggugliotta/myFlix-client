@@ -9,11 +9,11 @@
  <br/>
 <p align="center">
   <a href="https://github.com/ggugliotta/myFlix-client">
-    <img src="Flickette Movie View Screenshot.png" alt="Logo" width="300" height="300">
+    <img src="Flickette Movie View Screenshot.png" alt="Logo">
   </a>
 
   <p align="center">
-    Catch a vibe near you
+    Flickette App 
     <br/>
 
 
