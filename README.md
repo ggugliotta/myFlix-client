@@ -9,6 +9,12 @@
  <br/>
 <p align="center">
   <a href="https://github.com/ggugliotta/myFlix-client">
+    <img src="Flickette.png" alt="Logo">
+  </a>
+
+ <br/>
+<p align="center">
+  <a href="https://github.com/ggugliotta/myFlix-client">
     <img src="Flickette Home Page Screenshot.png" alt="Logo">
   </a>
 
