@@ -1,4 +1,4 @@
-# Flickette (client-side built with React)
+# Flickette (React Front-End UI for Single Page Application)
  <br/>
 <p align="center">
   <a href="https://github.com/ggugliotta/myFlix-client">
