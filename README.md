@@ -1,14 +1,10 @@
-# Flickette (React Front-End UI for Single Page Application)
- <br/>
 <p align="center">
   <a href="https://github.com/ggugliotta/myFlix-client">
     <img src="Flickette Logo .png" alt="Logo">
   </a>
- 
- <h1 align="center">Hi 👋, I'm Gabriella Gugliotta</h1>
-<h3 align="center">I am a passionate full stack developer from the United States</h3>
 
-<h1 align="center">Welcome to the client-side of Flickette </h1>
+# [Flickette](www.flickette.netlify.app) (React Front-End UI for Single Page Application)
+ <br/>
 
 - 🔭 This application is a single-page app (SPA) responsive app with routing, interactions, multiple interface views, and a contemporary user experience.
 
