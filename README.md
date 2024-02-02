@@ -1,4 +1,4 @@
-# Flickette (client-side built with Angular)
+# Flickette (client-side built with React)
  <br/>
 <p align="center">
   <a href="https://github.com/ggugliotta/myFlix-client">
