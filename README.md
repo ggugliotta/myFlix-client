@@ -9,7 +9,7 @@
  <br/>
 <p align="center">
   <a href="https://github.com/ggugliotta/myFlix-client">
-    <img src="Flickette.png" alt="Logo">
+    <img src="Flickette Logo.png" alt="Logo">
   </a>
 
  <br/>
