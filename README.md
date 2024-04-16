@@ -3,7 +3,7 @@
     <img src="Flickette Logo .png" alt="Logo">
   </a>
 
-# [Flickette](www.flickette.netlify.app) (React Front-End UI for Single Page Application)
+# [Flickette](https://flickette.netlify.app/login) (React Front-End UI for Single Page Application)
  <br/>
 
 - 🔭 This application is a single-page app (SPA) responsive app with routing, interactions, multiple interface views, and a contemporary user experience.
@@ -29,7 +29,7 @@
     <br/>
 
 
-- Flickette is a movie application built for movie fans who enjoy learning information about a variety of films. Users are able to access this application whenever they want to read and save information about their favorite movies. This app is [hosted online](flickette.netlify.app) and can be viewed on any device at any time anywhere for complete user experience. This [client-side project](github.com/ggugliotta/myFlix-client-side) supports the [server-side portion of this application](github.com/ggugliotta/movie-app) and was created to facilitate user requests and render responses from the server-side via multiple interface views. This app was built in ES2015+ with the full MERN stack (MongoDB, Express, React library, Node.js), and bootstrap UI library. A full list of project dependencies are outlined below. 
+- Flickette is a movie application built for movie fans who enjoy learning information about a variety of films. Users are able to access this application whenever they want to read and save information about their favorite movies. This app is [hosted online](https://flickette.netlify.app/login) and can be viewed on any device at any time anywhere for complete user experience. This [client-side project](https://flickette.netlify.app/login) supports the [server-side portion of this application](github.com/ggugliotta/movie-app) and was created to facilitate user requests and render responses from the server-side via multiple interface views. This app was built in ES2015+ with the full MERN stack (MongoDB, Express, React library, Node.js), and bootstrap UI library. A full list of project dependencies are outlined below. 
 
 - Build Tool: To get this project running, I used @parcel/transformer-sass version 2.9.3, parcel version 2.9.3, and process 0.11.10. 
 
