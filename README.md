@@ -11,7 +11,7 @@
 - Project dependencies include: @reduxjs/toolkit version 1.9.7, bootstrap version 5.3.2       js-tokens version 4.0.0,loose-envify version 1.4.0, prop-types version 15.8.1, react 18.2.0, 
 react-bootstrap version 2.9.0, react-dom version 18.2.0, react-redux 8.1.3, react-router 6.16.0, react-router-dom version 6.16.0, and scheduler version 0.16.0.
 
-- My movie app utilizes [render](render.com) to connect with my [API](www.mongodb.com) and [netlify](netlify.com)for the front-end server. View here: [flickette.netlify.app](flickette.netlify.app)
+- My movie app utilizes [render](render.com) to connect with my [API](www.mongodb.com) and [netlify](netlify.com) for the front-end server. View here: [flickette.netlify.app](flickette.netlify.app)
 
 - 🌱 I’m currently learning **filtering and creating a search bar UI with redux**
 
