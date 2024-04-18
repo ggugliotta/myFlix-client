@@ -15,7 +15,6 @@ const MyFlixApplication = () => {
         </Row>
       </Container>
     </Provider>
-
   );
 };
 

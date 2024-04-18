@@ -1,7 +1,15 @@
 import React, { useState } from "react";
-import { Form, Card, CardGroup, Container, Col, Row, Button } from 'react-bootstrap';
+import {
+  Form,
+  Card,
+  CardGroup,
+  Container,
+  Col,
+  Row,
+  Button,
+} from "react-bootstrap";
 import { useDispatch } from "react-redux";
-import { setUser } from "../../redux/reducers/user";
+import { setUser } from "../../redux/reducers/user/user";
 
 export const LoginView = ({ onLoggedIn }) => {
   const [username, setUsername] = useState("");
@@ -14,31 +22,31 @@ export const LoginView = ({ onLoggedIn }) => {
 
     const data = {
       Username: username,
-      Password: password
+      Password: password,
     };
 
     fetch("https://moviesapi-zy5e.onrender.com/login", {
       method: "POST",
       headers: {
-        "Content-Type": "application/json"
+        "Content-Type": "application/json",
       },
-      body: JSON.stringify(data)
+      body: JSON.stringify(data),
     })
       .then((response) => response.json())
       .then((data) => {
         console.log("Login response: ", data);
         if (data.user) {
-            localStorage.setItem("user", JSON.stringify(data.user));
-            localStorage.setItem("token", data.token);
-            onLoggedIn(setUser(username));
+          localStorage.setItem("user", JSON.stringify(data.user));
+          localStorage.setItem("token", data.token);
+          dispatch(setUser(username));
         } else {
           alert("No such user");
         }
-     })
-     .catch((e) => {
+      })
+      .catch((e) => {
         alert("Something went wrong");
-    });
-  }
+      });
+  };
 
   return (
     <Container>
@@ -47,27 +55,27 @@ export const LoginView = ({ onLoggedIn }) => {
           <CardGroup>
             <Card>
               <Card.Title>Login</Card.Title>
-                <Card.Body>
-                 <Form onSubmit={handleSubmit}>
+              <Card.Body>
+                <Form onSubmit={handleSubmit}>
                   <Form.Group controlId="formUsername">
                     <Form.Label>Username:</Form.Label>
-                      <Form.Control
-                        type="text"
-                        value={username}
-                        onChange={(e) => setUsername(e.target.value)}
-                        required
-                        minLength="3"
-                      />
+                    <Form.Control
+                      type="text"
+                      value={username}
+                      onChange={(e) => setUsername(e.target.value)}
+                      required
+                      minLength="3"
+                    />
                   </Form.Group>
 
                   <Form.Group controlId="formPassword">
                     <Form.Label>Password:</Form.Label>
-                      <Form.Control
-                        type="password"
-                        value={password}
-                        onChange={(e) => setPassword(e.target.value)}
-                        required
-                     />
+                    <Form.Control
+                      type="password"
+                      value={password}
+                      onChange={(e) => setPassword(e.target.value)}
+                      required
+                    />
                   </Form.Group>
                   <Button variant="primary" type="submit">
                     Submit
@@ -76,8 +84,8 @@ export const LoginView = ({ onLoggedIn }) => {
               </Card.Body>
             </Card>
           </CardGroup>
-         </Col>
+        </Col>
       </Row>
-   </Container>
+    </Container>
   );
-}
+};
