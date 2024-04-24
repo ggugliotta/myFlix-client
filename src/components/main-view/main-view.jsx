@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
-import { MovieCard } from "../movie-card/movie-card";
 import { MovieView } from "../movie-view/movie-view";
+import { MovieCard } from "../movie-card/movie-card";
 import { LoginView } from "../login-view/login-view";
 import { SignupView } from "../signup-view/signup-view";
 import { NavigationBar } from "../navigation-bar/navigation-bar";
@@ -72,7 +72,7 @@ export const MainView = () => {
             element={
               <>
                 {user ? (
-                  <Navigate to="/" replace />
+                  <Navigate to="/" />
                 ) : (
                   <Col md={5}>
                     <SignupView />
@@ -86,7 +86,7 @@ export const MainView = () => {
             element={
               <>
                 {user ? (
-                  <Navigate to="/" replace />
+                  <Navigate to="/" />
                 ) : (
                   <Col md={5}>
                     <LoginView onLoggedIn={onLoggedIn} />
@@ -113,60 +113,6 @@ export const MainView = () => {
                   </Col>
                 ) : (
                   <Col md={8}>
-                    <MovieView movies={movies} />
-                  </Col>
-                )}
-              </>
-            }
-          />
-          <Route
-            path="/profile"
-            element={
-              <>
-                {!user ? (
-                  <Navigate to="/login" replace />
-                ) : movies.length === 0 ? (
-                  <Col xl={1} class="spinner=wrapper">
-                    <Spinner
-                      class="spinner-border text-primary"
-                      animation="border"
-                      role="status"
-                    >
-                      <span className="visually-hidden">Loading...</span>
-                    </Spinner>
-                  </Col>
-                ) : (
-                  <Col md={8}>
-                    <ProfileView
-                      user={user}
-                      movies={movies}
-                      token={token}
-                      syncUser={syncUser}
-                    />
-                  </Col>
-                )}
-              </>
-            }
-          />
-          />
-          <Route
-            path="/movies/:movieId"
-            element={
-              <>
-                {!user ? (
-                  <Navigate to="/login" replace />
-                ) : movies.length === 0 ? (
-                  <Col md={10} class="spinner=wrapper">
-                    <Spinner
-                      class="spinner-border text-primary"
-                      animation="border"
-                      role="status"
-                    >
-                      <span className="visually-hidden">Loading...</span>
-                    </Spinner>
-                  </Col>
-                ) : (
-                  <Col md={10}>
                     <MovieView movies={movies} />
                   </Col>
                 )}
