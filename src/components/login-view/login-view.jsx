@@ -22,7 +22,7 @@ export const LoginView = ({ onLoggedIn }) => {
       Password: password,
     };
 
-    fetch("https://moviesapi-zy5e.onrender.com/login", {
+    fetch("https://moviesapi-zy5e.onrender.com/users/Username", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
