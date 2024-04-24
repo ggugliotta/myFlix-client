@@ -1,3 +1,15 @@
+.back-button {
+  color: #f5f5f5;
+  border: none;
+  border-radius: 4px;
+  padding: 4px 12px;
+}
+
+.navbar {
+  background-color: #cbc3e3;
+  overflow: hidden;
+}
+
 .card {
   background-color: #cbc3e3;
 }
@@ -12,18 +24,6 @@
   margin: auto;
   text-decoration-color: #fff;
   display: block;
-}
-
-.back-button {
-  color: #f5f5f5;
-  border: none;
-  border-radius: 4px;
-  padding: 4px 12px;
-}
-
-.navbar {
-  background-color: #cbc3e3;
-  overflow: hidden;
 }
 
 .fav-movie {

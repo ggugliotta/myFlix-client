@@ -11,7 +11,6 @@ import {
   Badge,
   ListGroup,
 } from "react-bootstrap";
-import { useSelector } from "react-redux";
 
 export const MovieView = ({ movies }) => {
   const { movieId } = useParams();
