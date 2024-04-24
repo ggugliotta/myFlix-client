@@ -12,7 +12,6 @@ import {
 export const LoginView = ({ onLoggedIn }) => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
-  //onLoggedIn(username);
 
   const handleSubmit = (event) => {
     //this prevents default behavior of the form to reload entire page
