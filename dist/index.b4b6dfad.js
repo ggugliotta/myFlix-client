@@ -47032,7 +47032,7 @@ const LoginView = ({ onLoggedIn })=>{
             Username: username,
             Password: password
         };
-        fetch("https://moviesapi-zy5e.onrender.com/users", {
+        fetch("https://moviesapi-zy5e.onrender.com/users/:Username", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
