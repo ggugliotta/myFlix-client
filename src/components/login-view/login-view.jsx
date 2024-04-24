@@ -8,13 +8,11 @@ import {
   Row,
   Button,
 } from "react-bootstrap";
-import { useDispatch } from "react-redux";
-import { setUser } from "../../redux/reducers/user/user";
 
 export const LoginView = ({ onLoggedIn }) => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
-  const dispatch = useDispatch();
+  onLoggedIn(username);
 
   const handleSubmit = (event) => {
     //this prevents default behavior of the form to reload entire page
