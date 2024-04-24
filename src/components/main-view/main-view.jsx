@@ -15,10 +15,12 @@ import { setMovies } from "../../redux/reducers/movies";
 export const MainView = () => {
   const storedUser = JSON.parse(localStorage.getItem("user"));
   const storedToken = localStorage.getItem("token");
-  const movies = useSelector((state) => state.movies.list);
-  const user = useSelector((state) => state.user);
+  const movies = useSelector((state) => state.movies.value);
+  const [user, setUser] = useState(storedUser ? storedUser : null);
+  //const movies = useSelector((state) => state.movies.list);
+  //const user = useSelector((state) => state.user);
   const [token, setToken] = useState(storedToken ? storedToken : null);
-  const dispatch = useDispatch();
+  //const dispatch = useDispatch();
 
   useEffect(() => {
     if (!token) return;
@@ -116,7 +118,7 @@ export const MainView = () => {
                   </Col>
                 ) : (
                   <Col md={8}>
-                    <MovieView />
+                    <MovieView movies={movies} />
                   </Col>
                 )}
               </>
