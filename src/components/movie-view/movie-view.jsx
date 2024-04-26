@@ -21,7 +21,11 @@ export const MovieView = ({ movies }) => {
     <Row>
       <Col xs={12} md={6}>
         <Card className="h-50">
-          <Card.Img variant="top" src={movie.imageURL} alt="movie image" />
+          <Card.Img
+            variant="top"
+            src={movie?.ImageUrl ?? movie?.ImagePath ?? ""}
+            alt="movie image"
+          />
         </Card>
       </Col>
 
