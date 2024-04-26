@@ -26,7 +26,7 @@ export const MainView = () => {
       .then((movies) => {
         const moviesFromApi = movies.map((movie) => {
           return {
-            id: movie._id,
+            id: movie.id,
             title: movie.Title,
             imageURL: movie?.ImageUrl ?? movie?.ImagePath ?? "",
             director: movie.Director,
