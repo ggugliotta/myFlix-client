@@ -32,24 +32,24 @@ export const MovieView = ({ movies }) => {
       <Col xs={12} md={6}>
         <Card>
           <Card.Body className="h-50">
-            <Card.Title className="fs-3 fw-bold">{movie.title}</Card.Title>
+            <Card.Title className="fs-3 fw-bold">{movie?.title}</Card.Title>
             <Card.Subtitle className="fs-6 fw-light">
-              {movie.releaseYear} - {movie.rating}
+              {movie?.releaseYear} - {movie?.Rating}
             </Card.Subtitle>
-            <Card.Text className="mt-3 mt-sm-4">{movie.description}</Card.Text>
+            <Card.Text className="mt-3 mt-sm-4">{movie?.description}</Card.Text>
             <Card.Text>
               <Badge pill bg="primary">
-                {movie.genre.Name}
+                {movie?.genre.Name}
               </Badge>
             </Card.Text>
           </Card.Body>
           <ListGroup className="list-group-flush">
             <ListGroup.Item>
-              <span className="fw-bold">Director:</span> {movie.director.Name}
+              <span className="fw-bold">Director:</span> {movie?.director.Name}
             </ListGroup.Item>
             <ListGroup.Item>
               <span className="fw-bold">Actors: </span>
-              <>{movie.actors.length > 0 ? movie.actors : <span>N/A</span>}</>
+              <>{movie?.actors.length > 0 ? movie?.actors : <span>N/A</span>}</>
             </ListGroup.Item>
           </ListGroup>
           <Card.Body className="text-end">

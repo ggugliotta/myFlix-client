@@ -102,9 +102,9 @@ export const MainView = () => {
                 {!user ? (
                   <Navigate to="/login" replace />
                 ) : movies.length === 0 ? (
-                  <Col md={10} class="spinner=wrapper">
+                  <Col md={10} className="spinner=wrapper">
                     <Spinner
-                      class="spinner-border text-primary"
+                      className="spinner-border text-primary"
                       animation="border"
                       role="status"
                     >
@@ -126,9 +126,9 @@ export const MainView = () => {
                 {!user ? (
                   <Navigate to="/login" replace />
                 ) : movies.length === 0 ? (
-                  <Col xl={1} class="spinner=wrapper">
+                  <Col xl={1} className="spinner=wrapper">
                     <Spinner
-                      class="spinner-border text-primary"
+                      className="spinner-border text-primary"
                       animation="border"
                       role="status"
                     >
@@ -155,9 +155,9 @@ export const MainView = () => {
                 {!user ? (
                   <Navigate to="/login" replace />
                 ) : movies.length === 0 ? (
-                  <Col xl={1} class="spinner=wrapper">
+                  <Col xl={1} className="spinner=wrapper">
                     <Spinner
-                      class="spinner-border text-primary"
+                      className="spinner-border text-primary"
                       animation="border"
                       role="status"
                     >
