@@ -2,29 +2,17 @@ import React from "react";
 import { useParams } from "react-router";
 import { Link } from "react-router-dom";
 import "./movie-view.scss";
-import {
-  Button,
-  Card,
-  Container,
-  Col,
-  Row,
-  Badge,
-  ListGroup,
-} from "react-bootstrap";
+import { Button, Card, Col, Row, Badge, ListGroup } from "react-bootstrap";
 
 export const MovieView = ({ movies }) => {
   const { movieId } = useParams();
 
-  const movie = movies.find((m) => m.id === movieId);
+  const movie = movies.find((m) => m._id === movieId);
   return (
     <Row>
       <Col xs={12} md={6}>
         <Card className="h-50">
-          <Card.Img
-            variant="top"
-            src={movie?.imageURL ?? movie?.imageURL ?? ""}
-            alt="movie image"
-          />
+          <Card.Img variant="top" src={movie.imageURL} alt="movie image" />
         </Card>
       </Col>
       <Col xs={12} md={6}>
@@ -32,7 +20,7 @@ export const MovieView = ({ movies }) => {
           <Card.Body className="h-50">
             <Card.Title className="fs-3 fw-bold">{movie.title}</Card.Title>
             <Card.Subtitle className="fs-6 fw-light">
-              {movie.releaseYear} - {movie.rating}
+              {movie?.releaseYear} - {movie.rating}
             </Card.Subtitle>
             <Card.Text className="mt-3 mt-sm-4">{movie.description}</Card.Text>
             <Card.Text>
@@ -47,7 +35,7 @@ export const MovieView = ({ movies }) => {
             </ListGroup.Item>
             <ListGroup.Item>
               <span className="fw-bold">Actors: </span>
-              <>{movie.actors.length > 0 ? movie.actors : <span>N/A</span>}</>
+              <>{movie?.actors.length > 0 ? movie.actors : <span>N/A</span>}</>
             </ListGroup.Item>
           </ListGroup>
           <Card.Body className="text-end">

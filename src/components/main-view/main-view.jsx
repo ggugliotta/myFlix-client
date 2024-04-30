@@ -1,6 +1,6 @@
-import { useEffect, useState } from "react";
-import { MovieView } from "../movie-view/movie-view";
+import { useState, useEffect } from "react";
 import { MovieCard } from "../movie-card/movie-card";
+import { MovieView } from "../movie-view/movie-view";
 import { LoginView } from "../login-view/login-view";
 import { SignupView } from "../signup-view/signup-view";
 import { NavigationBar } from "../navigation-bar/navigation-bar";
@@ -26,7 +26,7 @@ export const MainView = () => {
       .then((movies) => {
         const moviesFromApi = movies.map((movie) => {
           return {
-            id: movie.id,
+            id: movie._id,
             title: movie.Title,
             imageURL: movie?.ImageUrl ?? movie?.ImagePath ?? "",
             director: movie.Director,
@@ -38,7 +38,6 @@ export const MainView = () => {
             releaseYear: Number.parseInt(movie.ReleaseYear),
           };
         });
-
         setMovies(moviesFromApi);
       });
   }, [token]);
@@ -55,16 +54,14 @@ export const MainView = () => {
 
   return (
     <BrowserRouter>
-      <Row>
-        <NavigationBar
-          user={user}
-          onLoggedOut={() => {
-            setUser(null);
-            setToken(null);
-            localStorage.clear();
-          }}
-        />
-      </Row>
+      <NavigationBar
+        user={user}
+        onLoggedOut={() => {
+          setUser(null);
+          setToken(null);
+          localStorage.clear();
+        }}
+      />
       <Row className="justify-content-md-center mt-2 mt-sm-3 mt-md-4">
         <Routes>
           <Route
@@ -102,9 +99,9 @@ export const MainView = () => {
                 {!user ? (
                   <Navigate to="/login" replace />
                 ) : movies.length === 0 ? (
-                  <Col md={10} className="spinner=wrapper">
+                  <Col md={10} class="spinner=wrapper">
                     <Spinner
-                      className="spinner-border text-primary"
+                      class="spinner-border text-primary"
                       animation="border"
                       role="status"
                     >
@@ -112,7 +109,7 @@ export const MainView = () => {
                     </Spinner>
                   </Col>
                 ) : (
-                  <Col md={8}>
+                  <Col md={10}>
                     <MovieView movies={movies} />
                   </Col>
                 )}
@@ -126,9 +123,9 @@ export const MainView = () => {
                 {!user ? (
                   <Navigate to="/login" replace />
                 ) : movies.length === 0 ? (
-                  <Col xl={1} className="spinner=wrapper">
+                  <Col xl={1} class="spinner=wrapper">
                     <Spinner
-                      className="spinner-border text-primary"
+                      class="spinner-border text-primary"
                       animation="border"
                       role="status"
                     >
@@ -155,9 +152,9 @@ export const MainView = () => {
                 {!user ? (
                   <Navigate to="/login" replace />
                 ) : movies.length === 0 ? (
-                  <Col xl={1} className="spinner=wrapper">
+                  <Col xl={1} class="spinner=wrapper">
                     <Spinner
-                      className="spinner-border text-primary"
+                      class="spinner-border text-primary"
                       animation="border"
                       role="status"
                     >
